@@ -11,7 +11,22 @@ toppings = 0.00
 delivery_fee =1.50
 total_cost=0.00
 total_price=0.00
+
+
 # funtions
+def get_pizza_size():
+    price=0.00
+
+    size = input("what size pizza would you like S,M,L")
+
+    if size =="S":
+       price += 7.50
+    elif size =="M":
+       price += 10.00
+    elif size =="L":
+       price += 13.00
+
+    return price
 
 
 
@@ -21,19 +36,12 @@ total_price=0.00
 
 
 # code
-size = input("what size pizza would you like S,M,L")
 
-if size =="S":
-    price += 7.50
-elif size =="M":
-    price += 10.00
-elif size =="L":
-    price += 13.00
+   
 
+price = get_pizza_size()
 
-print("Price of your pizza is {}".format(price,))
-
-
+print("Price of your pizza is {}".format(price,))    
 
 size = input("what toppings would you like Donner,Magherita,Pepproni")
 
