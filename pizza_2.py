@@ -6,8 +6,8 @@ print("A Pizza Company")
 price = 0.00
 topping_price = 0.75
 toppings = 0.00
-delivery_fee =0.00
-
+delivery_fee =1.50
+total_cost=0.00
 
 # funtions
 
@@ -22,11 +22,11 @@ delivery_fee =0.00
 size = input("what size pizza would you like S,M,L")
 
 if size =="S":
-    price = 7.50
+    price += 7.50
 elif size =="M":
-    price = 10.00
+    price += 10.00
 elif size =="L":
-    price = 13.00
+    price += 13.00
 
 
 print("Price of your pizza is {}".format(price,))
@@ -48,6 +48,8 @@ print("Price of your topping is {}".format(toppings*topping_price,))
 size = input("Would u like it to be delivered yes,no")
 
 if size =="yes":
-    delivery_fee += 1.50
+    price += 1.50
 elif size =="no":
-    delivery_fee += 0.00
+    price += 0.00
+
+print(price)
