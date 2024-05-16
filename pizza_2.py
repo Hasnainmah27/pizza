@@ -4,11 +4,13 @@ print("A Pizza Company")
 # Variables
 
 price = 0.00
+
+
 topping_price = 0.75
 toppings = 0.00
 delivery_fee =1.50
 total_cost=0.00
-
+total_price=0.00
 # funtions
 
 
@@ -52,4 +54,12 @@ if size =="yes":
 elif size =="no":
     price += 0.00
 
-print(price)
+    
+#price=format(price,'.2f')
+#print('\xA3' + price)
+
+total_price=price+(toppings*topping_price)
+
+txt = "For only \xA3{price:.2f} pounds"
+
+print(txt.format(price = total_price))
